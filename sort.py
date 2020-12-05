@@ -1,4 +1,4 @@
-def bubblesort(data):
+def bubble_sort(data):
     for index in range(len(data) - 1):
         swap = False
         for index2 in range(len(data) - index - 1):
@@ -12,4 +12,15 @@ def bubblesort(data):
 import random
 data_list = random.sample(range(100), 50)
 
-print(bubblesort(data_list))
+print(bubble_sort(data_list))
+
+def select_sort(data):
+    for stand in range(len(data) - 1):
+        lowest = stand
+        for index in range(len(data) - stand - 1):
+            if lowest > index:
+                lowest = index
+                
+        data[lowest], data[stand] = data[stand], data[lowest]
+    
+    
